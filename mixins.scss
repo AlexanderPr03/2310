@@ -6,3 +6,8 @@
     justify-content: center;
     align-items: center;
 }
+
+@mixin dark-mode {
+    background-color: black;
+    color: white;
+}
