@@ -1,0 +1,68 @@
+body {
+  background-color: rgb(19, 19, 19);
+  color: #ff0000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+}
+nav ul {
+  display: flex;
+  color: black;
+  gap: 50px;
+  list-style: none;
+}
+nav ul li {
+  font-size: 30px;
+}
+nav ul li:hover {
+  text-decoration: underline;
+}
+
+.container {
+  width: 333.3333333333px;
+  height: 10vh;
+  background-color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-list {
+  list-style: none;
+  gap: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  background-color: black;
+  padding: 10%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message, .error-message, .success-message {
+  border: 1px solid black;
+  padding: 10px;
+  color: black;
+}
+
+.success-message {
+  margin-top: 20vh;
+  background-color: green;
+}
+
+.error-message {
+  background-color: red;
+}/*# sourceMappingURL=styles.css.map */

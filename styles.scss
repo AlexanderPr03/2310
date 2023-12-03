@@ -1,0 +1,93 @@
+// Import
+
+@import 'variables';
+@import 'mixins';
+
+
+body {
+    background-color: $background-color;
+    color: $primary-color;
+}
+
+
+// Nesting
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+
+    ul {
+        display: flex;
+        color: black;
+        gap: 50px;
+        list-style: none;
+
+        li {
+            font-size: 30px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+    }
+}
+
+
+.container {
+    // Operatori matematici (+, -, *. /)
+    width: $base-width / 3;
+    height: 10vh;
+    background-color: grey;
+
+    @include flex-center;
+}
+
+.menu-list {
+
+    list-style: none;
+    gap: 50px;
+
+    @include flex-center;
+}
+
+footer {
+    background-color: black;
+    padding: 10%;
+    color: white;
+
+    @include flex-center;
+}
+
+// Inheritance
+// Extend
+.message {
+    border: 1px solid black;
+    padding: 10px;
+    color: black;
+}
+
+.success-message {
+    margin-top: 20vh;
+
+    @extend .message;
+    background-color: green;
+}
+
+.error-message {
+    @extend .message;
+    background-color: red;
+}
+
+
+// If-else (Structuri Conditionale)
+
+// Structuri iterative (for, while, each)
+
+// Functiile (functions)
