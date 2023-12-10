@@ -11,6 +11,8 @@
 }
 
 .card {
+    display: none;
+
     width: 250px;
     height: 300px;
     border-radius: 12px;

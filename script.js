@@ -244,7 +244,6 @@ for (const element of lista_nume) {
 
 let descriere = document.querySelector('#descriere');
 
-let carduri = document.querySelectorAll('.card');
 
 
 // .textContent - utilizată doar pentru conținut textual intern!
@@ -257,12 +256,25 @@ descriere.innerHTML =  'Bine ai revenit, <b>Alexandru</b>!';
 
 let titluri = document.querySelectorAll('.titlu');
 
-function incarcaMeniu() {
-    for (let i=0; i<titluri.length; i++) {
-        // console.log(titluri[i].textContent);
-        // console.log(menu_items[i])
+// function incarcaMeniu() {
+//     for (let i=0; i<titluri.length; i++) {
+//         // console.log(titluri[i].textContent);
+//         // console.log(menu_items[i])
     
+//         titluri[i].textContent = menu_items[i];
+//     }
+// }
+
+let carduri = document.querySelectorAll('.card');
+
+
+function incarcaContinut() {
+    for (const card of carduri) {
+
+        card.style.display = 'block';
+    }
+
+    for (let i=0; i<titluri.length; i++) {
         titluri[i].textContent = menu_items[i];
     }
 }
-
