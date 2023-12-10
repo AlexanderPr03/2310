@@ -183,5 +183,53 @@ let masini = [
         manual: false
     }
 ]
-
+// let i=5;
+// i++;
+// i++
+// console.log(i); // i = 7;
 // console.log(masini);
+
+let menu_items = ['Transport', 'Imobiliare', 'Aparate telefonice și gadget-uri', 'Calculatoare și birotică', 'Construcții și reparații', 'Haine, încălțăminte și accesorii','Mobilă și interior'];
+
+// menu_items.length - lungimea arrayului
+
+// ciclu for 
+for (let i=0; i<menu_items.length; i++) {
+    // console.log(menu_items[i]);
+}
+
+// ciclu for-of
+
+// optional*** - for-each, for-in
+
+for (const element of menu_items) {
+    console.log(element);
+}
+
+
+// ciclul while
+// let i=0;
+
+// while (i<=10) {
+//     console.log(i);
+
+
+// }
+
+
+// optional*** - do-while
+
+// console.log(i);
+
+
+function greetUser(nume) {
+    // executam niste operatii
+
+    return 'Bine ai revenit, ' + nume;
+}
+
+lista_nume = ['Ion','Alexandru','Maria','Vlad'];
+
+for (const element of lista_nume) {
+    console.log(greetUser(element));
+}
