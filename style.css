@@ -1,0 +1,39 @@
+#descriere {
+    font-size: 36px;
+}
+    
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+    padding: 0 150px 0 150px;
+}
+
+.card {
+    width: 250px;
+    height: 300px;
+    border-radius: 12px;
+
+    padding: 20px;
+    cursor: pointer;
+
+    border: 1px solid black;
+    
+    transition: all 0.4s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+#load {
+    padding: 15px;
+    border-radius: 12px;
+    border: none;
+
+    color: white;
+    background-color: black;
+
+    cursor: pointer;
+}

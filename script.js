@@ -225,7 +225,7 @@ for (const element of menu_items) {
 function greetUser(nume) {
     // executam niste operatii
 
-    return 'Bine ai revenit, ' + nume;
+    return 'Bine ai revenit, ' + nume +"!";
 }
 
 lista_nume = ['Ion','Alexandru','Maria','Vlad'];
@@ -233,3 +233,36 @@ lista_nume = ['Ion','Alexandru','Maria','Vlad'];
 for (const element of lista_nume) {
     console.log(greetUser(element));
 }
+
+
+
+// DOM (Document Object Model)
+
+// document.getElementById();
+// document.getElementsByClassName();
+// document.getElementsByTagName();
+
+let descriere = document.querySelector('#descriere');
+
+let carduri = document.querySelectorAll('.card');
+
+
+// .textContent - utilizată doar pentru conținut textual intern!
+// descriere.textContent =  'Bine ai revenit, <b>Alexandru</b>!'
+
+
+menu_items = ['Transport', 'Imobiliare', 'Aparate telefonice și gadget-uri', 'Calculatoare și birotică', 'Construcții și reparații', 'Haine, încălțăminte și accesorii']
+
+descriere.innerHTML =  'Bine ai revenit, <b>Alexandru</b>!';
+
+let titluri = document.querySelectorAll('.titlu');
+
+function incarcaMeniu() {
+    for (let i=0; i<titluri.length; i++) {
+        // console.log(titluri[i].textContent);
+        // console.log(menu_items[i])
+    
+        titluri[i].textContent = menu_items[i];
+    }
+}
+
