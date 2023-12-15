@@ -29,7 +29,7 @@
     transform: scale(1.1);
 }
 
-#load {
+.load {
     padding: 15px;
     border-radius: 12px;
     border: none;
@@ -38,4 +38,28 @@
     background-color: black;
 
     cursor: pointer;
+}
+
+.d-block {
+    display: block;
+    background-color: black;
+    color: white;
+}
+
+#imagineGalerie {
+    transition: all 0.5s ease-in-out;
+    height: 500px;
+}
+
+#img_container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#button_container, #index_container {
+    width: 100%;
+    text-align: center;
+
 }

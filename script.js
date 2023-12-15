@@ -271,10 +271,98 @@ let carduri = document.querySelectorAll('.card');
 function incarcaContinut() {
     for (const card of carduri) {
 
-        card.style.display = 'block';
+        // card.classList.add() - adaugare clasa
+        // card.classList.remove() - scoate clasa
+
+        card.classList.toggle('d-block');
+        // card.style.border
+        // card.style.borderRadius
     }
 
     for (let i=0; i<titluri.length; i++) {
         titluri[i].textContent = menu_items[i];
     }
 }
+
+// function ascundeContinut() {
+//     for (const card of carduri) {
+//         card.classList.remove('d-block');
+//     }
+// }
+
+
+let img = document.querySelector('#imagineGalerie');
+let indexText = document.querySelector('#index_img');
+
+
+
+let imagini = [
+ /*0*/   'https://i0.wp.com/plopdo.com/wp-content/uploads/2021/07/Screenshot-1.png?resize=1210%2C642&ssl=1',
+ /*1*/   'https://kinsta.com/wp-content/uploads/2021/11/front-end-developer.png',
+ /*2*/   'https://t3.ftcdn.net/jpg/02/92/88/72/360_F_292887204_2wH041phSQo70eqaE9GRqFvn5MmQ4B8w.jpg',
+ /*3*/   'https://www.weblineindia.com/wp-content/uploads/2017/04/front-end-development-with-weblineindia-1.jpg',
+ /*4*/   'https://techvify-software.com/wp-content/uploads/2023/07/frontend-development-tools.png',
+ /*5*/   'https://t3.ftcdn.net/jpg/03/18/60/62/360_F_318606217_Hk8jo2MVoI33SQOkYrfOF929J7JgIP0P.jpg',
+ 
+]
+
+img.setAttribute('src', imagini[0])
+indexText.textContent = 1;
+
+let imagineCurenta = 0; // - va contine in interiorul acesteia indicele imaginii curente
+function nextImage() {
+    imagineCurenta++; // 0->1, 1->2 etc
+
+    // daca ajungem la sfarsitul listei, resetam valoarea la imagineCurenta la 0
+    // if (imagineCurenta == imagini.length) {
+    //     imagineCurenta=0;
+    // }
+
+    // **
+
+    imagineCurenta = imagineCurenta % imagini.length;
+
+    indexText.textContent = imagineCurenta+1;
+
+
+    img.setAttribute('src', imagini[imagineCurenta])
+
+    console.log(imagineCurenta)
+    console.log(img.getAttribute('src'));
+
+
+}
+
+
+
+function previousImage() {
+
+    imagineCurenta--; // 3->2, 2->1, 1->0
+
+    if (imagineCurenta == -1) {
+        imagineCurenta = imagini.length-1;
+    }
+
+    indexText.textContent = imagineCurenta+1;
+
+    // ***
+    // imagineCurenta = imagineCurenta % imagini.length;
+
+    img.setAttribute('src', imagini[imagineCurenta])
+
+
+    console.log(imagineCurenta)
+    console.log(img.getAttribute('src'));
+    
+}
+
+function changeImage(actiune) {
+    if (actiune == 'next') {
+
+    } else if (actiune == 'previous') {
+        
+    }
+}
+
+
+console.log(10 % 4);

@@ -10,7 +10,9 @@
 </head>
 <body>
     <p id="descriere">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit fuga qui provident dolorem asperiores illum. Illum nihil, ratione omnis tenetur commodi ad, odio delectus nisi quo sequi id at repudiandae?</p>
+    <button class="load" onclick="incarcaContinut()">Încarcă/Ascunde Conținut</button>
 
+    <br><br>
     <div id="container">
         <div class="card">
             <h1 class="titlu"></h1>
@@ -36,10 +38,19 @@
 
 
     <!-- <button id="load" onclick="incarcaMeniu()">Încarcă Meniu</button> -->
-
-    <button id="load" onclick="incarcaContinut()">Încarcă Conținut</button>
-
-  
+    <div id="img_container">
+        <img id="imagineGalerie">
+        <div id="index_container">
+            <h1 id="index_img"></h1>
+        </div>
+        <div id="button_container">
+            <button class="load" onclick="previousImage()">Previous</button>
+            <button class="load" onclick="nextImage()">Next</button>    
+        </div>
+        
+    </div>
+    
+    <br>
 </body>
 </html>
 
