@@ -268,21 +268,21 @@ let titluri = document.querySelectorAll('.titlu');
 let carduri = document.querySelectorAll('.card');
 
 
-function incarcaContinut() {
-    for (const card of carduri) {
+// function incarcaContinut() {
+//     for (const card of carduri) {
 
-        // card.classList.add() - adaugare clasa
-        // card.classList.remove() - scoate clasa
+//         // card.classList.add() - adaugare clasa
+//         // card.classList.remove() - scoate clasa
 
-        card.classList.toggle('d-block');
-        // card.style.border
-        // card.style.borderRadius
-    }
+//         card.classList.toggle('d-block');
+//         // card.style.border
+//         // card.style.borderRadius
+//     }
 
-    for (let i=0; i<titluri.length; i++) {
-        titluri[i].textContent = menu_items[i];
-    }
-}
+//     for (let i=0; i<titluri.length; i++) {
+//         titluri[i].textContent = menu_items[i];
+//     }
+// }
 
 // function ascundeContinut() {
 //     for (const card of carduri) {
@@ -364,5 +364,35 @@ function changeImage(actiune) {
     }
 }
 
+let container_card = document.querySelector('#container');
 
-console.log(10 % 4);
+function addCard() {
+
+    // Cream cardul
+
+    let div_card = document.createElement('div');
+    div_card.classList.add('card');
+
+
+    // Cream titlul
+    let titlu_card = document.createElement('h1');
+    titlu_card.classList.add('titlu');
+
+    // Cream descrierea
+    let desc_card = document.createElement('p');
+    desc_card.classList.add('desc');
+    desc_card.textContent = 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis inventore quos atque numquam, sequi sit dolore, unde laborum rem nemo impedit molestiae reprehenderit ratione voluptatem voluptatum error minus temporibus ullam.';
+
+    div_card.append(titlu_card);
+    div_card.append(desc_card);
+
+    container_card.append(div_card);
+}
+
+/*
+ <div class="card">
+    <h1 class="titlu"></h1>
+    <p class="desc"></p>
+</div>
+
+*/
