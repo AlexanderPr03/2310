@@ -9,13 +9,46 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <div class="welcomeMessage">
+        <h1 id="mainTitle">Bine ați venit</h1>
+    </div>
+
+    <a href="#sfarsitPagina"></a>
+
+    <button class="load" id="button_dark_mode">Dark Mode</button>
     <p id="descriere">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit fuga qui provident dolorem asperiores illum. Illum nihil, ratione omnis tenetur commodi ad, odio delectus nisi quo sequi id at repudiandae?</p>
+    
+    <div id="textInput">
+        <form id="formLogin">
+            <div id="submissionSuccess">
+                Formularul a fost trimis cu succes!
+            </div>
+
+
+            <input class="inputForm" id="passwordInput" type="text" placeholder="Username" required name="username">
+            
+            <input class="inputForm"  type="password" placeholder="Parola" required name="parola">
+            
+
+            <input class="inputForm" type="tel" placeholder="Nr. Telefon" required name="phone">
+            <input class="inputForm" type="number" placeholder="Cantitate" required name="quantity">
+                <input type="checkbox" id="tos">
+                <label for="tos">Am citit TOS</label>
+
+            <input type="submit">
+
+            
+        </form>
+    </div>
+    
     <button class="load" onclick="incarcaContinut()">Încarcă/Ascunde Conținut</button>
 
     <br><br>
     <div id="container">
         <div class="card">
-            <h1 class="titlu"></h1>
+            <h1 class="titlu" id="passwordCount"></p>
+                </h1>
             <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis inventore quos atque numquam, sequi sit dolore, unde laborum rem nemo impedit molestiae reprehenderit ratione voluptatem voluptatum error minus temporibus ullam.</p>
         </div>
         <div class="card">
@@ -50,7 +83,12 @@
         </div>
         
     </div>
-    <br>
+    <br><br><br>
+
+    <div class="box">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus dolorem rerum et enim omnis eaque officiis itaque iure voluptatem laboriosam cumque eum culpa, minus at quasi maiores cum mollitia suscipit.</p>
+
+    </div>  
 </body>
 </html>
 
